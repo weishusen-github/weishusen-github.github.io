@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>个人博客记 —— Github pages 绑定个人域名 | Gridea</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://weishusen-github.github.io/favicon.ico?v=1723639533352">
+<link rel="stylesheet" href="https://weishusen-github.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="前言
+近日搭建了自己的 Blog，使用的是 Hexo + github pages。众所周知，github pages的域名都是统一的your_name.github.io。想了想，能不能换个域名呢？当然是可以滴。
+于是，在度娘了之后，也算..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://weishusen-github.github.io">
+        <img src="https://weishusen-github.github.io/images/avatar.png?v=1723639533352" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://weishusen-github.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">个人博客记 —— Github pages 绑定个人域名</h2>
+            <div class="post-date">2024-08-14</div>
+            
+            <div class="post-content" v-pre>
+              <p>前言<br>
+近日搭建了自己的 Blog，使用的是 Hexo + github pages。众所周知，github pages的域名都是统一的your_name.github.io。想了想，能不能换个域名呢？当然是可以滴。<br>
+于是，在度娘了之后，也算找到了方法。但是网上的介绍都是操作流程，没有详细的解释，我自己也是有些迷糊。好在域名绑定成功了。<br>
+遂决定写一篇博文分享一下自己对这个过程的理解。<br>
+请自行准备：个人的 github pages，个人域名<br>
+博文地址：个人博客记 —— Github pages 绑定个人域名</p>
+<p>简述<br>
+绑定域名需要在 域名解析服务商 和 github 两边都进行操作。</p>
+<p>在域名解析服务商进行个人域名解析，将域名绑定到个人 github pages。<br>
+同时在 github pages 需要配置 CNAME 文件重定向到你的域名。<br>
+1.域名解析配置<br>
+简单点说就是将域名和IP或其他域名进行绑定，让你能通过不同域名访问同一个网站。<br>
+解析商不多说，DNSPod、阿里云、腾讯云等等。一般国内域名购买商都同时提供解析服务。我使用的是腾讯云买的域名 xhuyq.me ，就用腾讯云解析了。</p>
+<p>注：以下过程为通用版本，非具体解析商的操作过程。</p>
+<p>首先找到域名管理，选择域名解析功能。记录类型（如图提示），我们选择 A记录 或者 CNAME 就可以了。接下里就是域名解析的几个要点：</p>
+<p>domain-1domain-2</p>
+<p>(1) A记录 类型 记录值填写 IP 值，两种选择：</p>
+<blockquote>
+<p>你的 <code>github.io</code> 的 <code>IP</code> 值<br>
+在官方提供的两个 <code>IP</code> 中选择 <code>192.30.252.153</code>、<code>192.30.252.154</code><br>
+(2) CNAME类型 （如图提示），请选好主机记录，按主机记录类型填写记录值。推荐选择的 @ ，那么记录值就填写按各位github名填写your_name.github.io就好了。</p>
+</blockquote>
+<p>2.github pages 方面的 CNAME 文件配置<br>
+（1）在github的github pages的仓库根目录里加上CNAME文件，里面写上个人域名即可。我的是：</p>
+<p>xhuyq.me<br>
+（2）或者直接在github.io仓库的Settings的GitHub Pages项直接设置Custom domain,github会自动添加CNAME文件:</p>
+<p>domain-3<br>
+##markdown</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://weishusen-github.github.io/post/hello-gridea/">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

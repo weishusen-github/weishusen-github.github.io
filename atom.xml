@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://weishusen-github.github.io</id>
+    <title>Gridea</title>
+    <updated>2024-08-14T12:45:36.773Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://weishusen-github.github.io"/>
+    <link rel="self" href="https://weishusen-github.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://weishusen-github.github.io/images/avatar.png</logo>
+    <icon>https://weishusen-github.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[111]]></title>
+        <id>https://weishusen-github.github.io/post/111/</id>
+        <link href="https://weishusen-github.github.io/post/111/">
+        </link>
+        <updated>2024-08-14T12:24:49.000Z</updated>
+        <summary type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://weishusen-github.github.io/post-images/1723638318053.jpg" alt="" loading="lazy"></figure>
+]]></summary>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://weishusen-github.github.io/post-images/1723638318053.jpg" alt="" loading="lazy"></figure>
+<!-- more -->
+<!-- more -->
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[个人博客记 —— Github pages 绑定个人域名]]></title>
+        <id>https://weishusen-github.github.io/post/ge-ren-bo-ke-ji-github-pages-bang-ding-ge-ren-yu-ming/</id>
+        <link href="https://weishusen-github.github.io/post/ge-ren-bo-ke-ji-github-pages-bang-ding-ge-ren-yu-ming/">
+        </link>
+        <updated>2024-08-14T11:50:21.000Z</updated>
+        <content type="html"><![CDATA[<p>前言<br>
+近日搭建了自己的 Blog，使用的是 Hexo + github pages。众所周知，github pages的域名都是统一的your_name.github.io。想了想，能不能换个域名呢？当然是可以滴。<br>
+于是，在度娘了之后，也算找到了方法。但是网上的介绍都是操作流程，没有详细的解释，我自己也是有些迷糊。好在域名绑定成功了。<br>
+遂决定写一篇博文分享一下自己对这个过程的理解。<br>
+请自行准备：个人的 github pages，个人域名<br>
+博文地址：个人博客记 —— Github pages 绑定个人域名</p>
+<p>简述<br>
+绑定域名需要在 域名解析服务商 和 github 两边都进行操作。</p>
+<p>在域名解析服务商进行个人域名解析，将域名绑定到个人 github pages。<br>
+同时在 github pages 需要配置 CNAME 文件重定向到你的域名。<br>
+1.域名解析配置<br>
+简单点说就是将域名和IP或其他域名进行绑定，让你能通过不同域名访问同一个网站。<br>
+解析商不多说，DNSPod、阿里云、腾讯云等等。一般国内域名购买商都同时提供解析服务。我使用的是腾讯云买的域名 xhuyq.me ，就用腾讯云解析了。</p>
+<p>注：以下过程为通用版本，非具体解析商的操作过程。</p>
+<p>首先找到域名管理，选择域名解析功能。记录类型（如图提示），我们选择 A记录 或者 CNAME 就可以了。接下里就是域名解析的几个要点：</p>
+<p>domain-1domain-2</p>
+<p>(1) A记录 类型 记录值填写 IP 值，两种选择：</p>
+<blockquote>
+<p>你的 <code>github.io</code> 的 <code>IP</code> 值<br>
+在官方提供的两个 <code>IP</code> 中选择 <code>192.30.252.153</code>、<code>192.30.252.154</code><br>
+(2) CNAME类型 （如图提示），请选好主机记录，按主机记录类型填写记录值。推荐选择的 @ ，那么记录值就填写按各位github名填写your_name.github.io就好了。</p>
+</blockquote>
+<p>2.github pages 方面的 CNAME 文件配置<br>
+（1）在github的github pages的仓库根目录里加上CNAME文件，里面写上个人域名即可。我的是：</p>
+<p>xhuyq.me<br>
+（2）或者直接在github.io仓库的Settings的GitHub Pages项直接设置Custom domain,github会自动添加CNAME文件:</p>
+<p>domain-3<br>
+##markdown</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://weishusen-github.github.io/post/hello-gridea/</id>
+        <link href="https://weishusen-github.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="https://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
